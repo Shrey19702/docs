@@ -1,40 +1,38 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
-  "colors": {
-    "primary": "#2530FF",
-    "light": "#07C983",
-    "dark": "#000"
+  "theme": "almond",
+  "name": "Vision AIGC API",
+  "logo": {
+    "light": "/logo/logo.svg",
+    "dark": "/logo/logo.svg"
   },
   "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#2530FF",
+    "light": "#090909",
+    "dark": "#050505"
+  },
   "navigation": {
     "tabs": [
       {
         "tab": "API reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": " ",
             "pages": [
-              "api-reference/introduction"
+              "/quickstart"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "API Reference",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/endpoint/basic_analysis",
+              "api-reference/endpoint/advance_analysis"
             ]
           }
         ]
       }
     ]
-  },
-  "logo": {
-    "light": "/logo/logo.svg",
-    "dark": "/logo/logo.svg"
   },
   "navbar": {
     "links": [
@@ -46,21 +44,21 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://www.contrails.ai",
+      "x": "https://x.com/contrails_ai",
+      "linkedin": "https://www.linkedin.com/company/contrails-ai"
     }
   }
 }
