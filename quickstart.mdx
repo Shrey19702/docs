@@ -1,13 +1,12 @@
 ---
 title: 'Quickstart Guide'
-description: 'Get up and running with the AI Content Detection API in just a few minutes.'
+description: 'This guide shows you how to make your first analysis request. Get started in minutes.'
 icon: 'bolt'
 ---
 
 Welcome to the AI Content Detection API! This guide will walk you through the essential steps to make your first analysis request.
 
 ## 1. Get Your API Key
-
 Before you can make any requests, you'll need an API key. You can generate a key from your user dashboard.
 
 All API requests must be authenticated by including your key as a Bearer token in the `Authorization` header.
@@ -15,10 +14,12 @@ All API requests must be authenticated by including your key as a Bearer token i
 ```bash
 Authorization: Bearer YOUR_API_KEY
 ```
+Keep your key secure. Requests without a valid key will be rejected.
 
 ## 2. Choose Your Analysis Type
-
-The API offers two distinct, synchronous methods for analyzing your media files, tailored to different use cases.
+You have two options when analyzing your media files with the API. 
+If you want a quick check, the `basic analysis` returns results immediately. 
+If you need more detail, the `advanced analysis` provides a thorough analysis, including metadata and visual insights.
 
 <CardGroup>
     <Card title="Basic Analysis">
@@ -39,7 +40,7 @@ The API offers two distinct, synchronous methods for analyzing your media files,
 
 ## 3. Make Your First Request (Basic Analysis)
 
-Here’s a curl example of how to send an image file for a basic analysis. The `filenames` parameter is required and must correspond to the `files` you upload.
+Here’s a curl example of how to send an image file for a basic analysis. The `filenames` parameter is required and must correspond to the files you upload.
 
 <CodeGroup>
     ```bash Step 1: Set API Key
@@ -56,11 +57,10 @@ Here’s a curl example of how to send an image file for a basic analysis. The `
     ```
 </CodeGroup>
 
-You should receive a JSON response containing the analysis results for your file.
+The API responds with a JSON object containing results. Each file is analyzed for AI-generated content, and relevant metadata is included.
 
 ## 4. Making an Advanced Analysis Request
-
-The advanced analysis endpoint works synchronously, just like the basic one, but provides a much more detailed response. The request structure is very similar.
+Advanced analysis uses the same request structure but returns a more detailed response.
 
 <CodeGroup>
     ```bash Step 1: Set API Key
@@ -76,5 +76,10 @@ The advanced analysis endpoint works synchronously, just like the basic one, but
     -F "concern=Please run a full check on this image for a news report."
     ```
 </CodeGroup>
+The response includes:
+- Visual heatmaps highlighting regions flagged as AI-generated
+- Watermark detection results
+- Detailed metadata for each file
 
-You will receive an immediate JSON response containing the detailed advanced analysis, including heatmaps, watermark checks, and more.
+
+Use advanced analysis when you need in-depth examination or file-level metadata for multiple checks.
